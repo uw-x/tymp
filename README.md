@@ -6,7 +6,7 @@ This repository contains a the hardware design (schematic and PCB), and software
 ## Hardware
 * [Schematic](hardware/TYMP_PCB_V1.pdf)
 * [PCB design files](hardware/pcb.zip)
-* [BOM](hardware/Bill of Material.xlsx)
+* [BOM](<hardware/Bill of Material.xlsx>)
 
 The PCB project can be opened using Altium Designer.
 
