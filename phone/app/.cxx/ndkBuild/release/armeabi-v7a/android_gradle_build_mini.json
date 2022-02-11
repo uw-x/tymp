@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "/home/justin/tymp/app/Android.mk",
+    "/home/justin/tymp/app/Application.mk"
+  ],
+  "cleanCommands": [
+    "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "buildTargetsCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-release-armeabi-v7a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libnative-lib.so",
+      "abi": "armeabi-v7a",
+      "output": "/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

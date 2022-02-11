@@ -1,0 +1,34 @@
+{
+  "buildFiles": [
+    "/home/justin/tymp/app/Android.mk",
+    "/home/justin/tymp/app/Application.mk"
+  ],
+  "cleanCommands": [
+    "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "buildTargetsCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-release-arm64-v8a": {
+      "buildCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/tymp/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/tymp/app/Application.mk APP_ABI\u003darm64-v8a NDK_ALL_ABIS\u003darm64-v8a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-26 NDK_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/justin/tymp/app/build/intermediates/ndkBuild/release/lib /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libnative-lib.so",
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/home/justin/tymp/app/src/main/cpp/native-lib.cpp",
+          "flags": "-target aarch64-none-linux-android26 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG -I/home/justin/fftw3/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/../llvm-libc++abi/include -std\u003dc++11 -DANDROID -nostdinc++ -Wa,--noexecstack -Wformat -Werror\u003dformat-security"
+        }
+      ],
+      "output": "/home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cppCompilerExecutable": "/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

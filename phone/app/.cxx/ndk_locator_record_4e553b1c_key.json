@@ -1,0 +1,8 @@
+{
+  "ndkDirProperty": "/root/Android/Sdk/ndk-bundle",
+  "sdkFolder": "/root/Android/Sdk",
+  "sideBySideNdkFolderNames": [
+    "22.1.7171670",
+    "21.2.6472646"
+  ]
+}

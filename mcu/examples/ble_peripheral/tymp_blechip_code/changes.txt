@@ -1,0 +1,116 @@
+Changelog
+
+-----------
+
+*Syringe jerking forward*
+
+When finding seal use large microsteps, when taking measurement, use small microsteps
+
+In tymp_start() and when seal is lost in motor.c:
+
+MICROSTEPS = 32;
+microstepcurve = microstepcurve32;
+
+When seal is found in motor.c
+
+MICROSTEPS = 8;
+microstepcurve = microstepcurve8;
+
+I tested this and it seems to work.
+
+-----------
+
+*Syringe ends up being too forward after seal is lost multiple times*
+
+If the seal is lost and the syringe has advanced too far forward or backward, stop the measurement.
+
+Added variables seal_found_counter and seal_lost_counter to keep track of how many times seal is lost and found.
+
+If the seal is lost but a seal was previously found. This is the time to end the measurement.
+
+Audiologist should ideally begin measurement after seal is already found in the ear.
+
+But this way, audiologist can still begin measurement outside the ear.
+
+if (seal_found_counter >= 1 && abs(mtr_step_counter_at_measurement_start-mtr_step_counter) > MTR_MOVED_TOO_FAR_THRESHOLD) {
+    tymp_done = true;
+    mtr_stop();
+}
+
+And in tymp_start():
+mtr_step_counter_at_measurement_start = mtr_step_counter
+
+MTR_MOVED_TOO_FAR_THRESHOLD is arbitarily set to 3200 turns (~100 motor steps)
+
+This needs more testing regarding setting the threshold. But otherwise functions fine.
+
+-----------------
+
+*Go back to init* 
+
+Made this change, which seems needed to work:
+
+motor.c
+From
+if(mtr_step_counter == 65536){
+
+To
+if (move_to_init_seal_lost && !seal_flag &&
+  (mtr_dir==1 && mtr_step_counter <= 65536 ||
+  mtr_dir==0 && mtr_step_counter >= 65536)) {
+
+I noticed that the number of mtr_step_counter is not always consistent.
+For example if I tell mtr to just move 10 steps, the mtr_step_counter sometimes changes.
+Possibly this is because of switching between Bluetooth processes and motor processes.
+Therefore when mtr_step_counter is increased or decreased it may not end up at exactly 65536.
+
+Needs some more testing to fully verify.
+
+-----------------
+
+Cable length was originally around 0.75m. It is around doubled now to 1.75m.
+This is not as long as the Tympstar cable of 2.5m but it seems like it would be long enough.
+
+-----------------
+
+To make the grip around the insertion head large, we could add some electrical tape around the white head and the black cable so the white head does not move around so much.
+
+-----------------
+
+Syringe is now 5ml instead of 3ml. Overhall height is about the same. Measurement is now faster.
+
+-----------------
+
+PROBLEMS
+
+----------------
+
+There is something wrong with the mic connection on the PCB, the signal is very noisy.
+
+----------------
+
+The seal check is overly sensitive. I have changed the pressure threshold, but always, the pressure reading somehow manages to exceed this threshold and say there is a seal when there is none. And if this is too high, then it cannot detect a seal in the ear. So for all reasonable values, at the very beginning of the measurement it will detect a seal. It is unclear why this is happening.
+
+This does not really matter though. Because the syringe does not jerk forward.
+
+----------------
+
+There is a mic/speaker coupling issue with the other PCB.
+
+If you play a tone out of the speaker and observe the microphone spectrum, it is exactly the same even if you cover the speaker.
+
+We do *not* have this problem with the PCB on your desk.
+
+It is unclear what the issue is, I carefully removed the glue and resoldered the components to see if it had any effect but it did not.
+
+I suspect there is some connection issue with the jack.
+
+Because I seem to have to reconnect the jack to the PCB and move it around a few times for the microphone and/or speaker to even work.
+
+We don't have to fix this for the first deployment at CHDD, but should figure it out or use another PCB for the deployment with Christi.
+
+----------------
+
+1. Fix microphone connection issue
+
+----------------

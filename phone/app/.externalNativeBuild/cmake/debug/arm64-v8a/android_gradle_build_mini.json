@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/home/justin/ffttest2/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/root/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/justin/ffttest2/app/.externalNativeBuild/cmake/debug/arm64-v8a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/root/Android/Sdk/cmake/3.6.4111459/bin/cmake --build /home/justin/ffttest2/app/.externalNativeBuild/cmake/debug/arm64-v8a --target native-lib",
+      "abi": "arm64-v8a",
+      "output": "/home/justin/ffttest2/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so"
+    }
+  }
+}

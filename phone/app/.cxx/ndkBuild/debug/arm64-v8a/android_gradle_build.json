@@ -1,0 +1,67 @@
+{
+  "buildFiles": [
+    "/home/justin/tymp_code/tymp/phone/app/Android.mk",
+    "/home/justin/tymp_code/tymp/phone/app/Application.mk"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/root/Android/Sdk/ndk-bundle/ndk-build",
+      "NDK_PROJECT_PATH\u003dnull",
+      "APP_BUILD_SCRIPT\u003d/home/justin/tymp_code/tymp/phone/app/Android.mk",
+      "NDK_APPLICATION_MK\u003d/home/justin/tymp_code/tymp/phone/app/Application.mk",
+      "APP_ABI\u003darm64-v8a",
+      "NDK_ALL_ABIS\u003darm64-v8a",
+      "NDK_DEBUG\u003d1",
+      "APP_PLATFORM\u003dandroid-23",
+      "NDK_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj",
+      "NDK_LIBS_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/lib",
+      "APP_CFLAGS+\u003d-DDEBUG\u003d1",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/root/Android/Sdk/ndk-bundle/ndk-build",
+    "NDK_PROJECT_PATH\u003dnull",
+    "APP_BUILD_SCRIPT\u003d/home/justin/tymp_code/tymp/phone/app/Android.mk",
+    "NDK_APPLICATION_MK\u003d/home/justin/tymp_code/tymp/phone/app/Application.mk",
+    "APP_ABI\u003darm64-v8a",
+    "NDK_ALL_ABIS\u003darm64-v8a",
+    "NDK_DEBUG\u003d1",
+    "APP_PLATFORM\u003dandroid-23",
+    "NDK_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj",
+    "NDK_LIBS_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/lib",
+    "APP_CFLAGS+\u003d-DDEBUG\u003d1",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib-debug-arm64-v8a": {
+      "buildCommandComponents": [
+        "/root/Android/Sdk/ndk-bundle/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/home/justin/tymp_code/tymp/phone/app/Android.mk",
+        "NDK_APPLICATION_MK\u003d/home/justin/tymp_code/tymp/phone/app/Application.mk",
+        "APP_ABI\u003darm64-v8a",
+        "NDK_ALL_ABIS\u003darm64-v8a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-23",
+        "NDK_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/lib",
+        "APP_CFLAGS+\u003d-DDEBUG\u003d1",
+        "/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libnative-lib.so"
+      ],
+      "toolchain": "toolchain-arm64-v8a",
+      "abi": "arm64-v8a",
+      "artifactName": "native-lib",
+      "output": "/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj/local/arm64-v8a/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-arm64-v8a": {
+      "cppCompilerExecutable": "/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

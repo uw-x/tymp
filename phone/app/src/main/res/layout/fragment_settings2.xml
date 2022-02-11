@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/resultsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="112dp"
+        android:text=""
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/toneFrequencyVal"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="226"
+        app:layout_constraintBottom_toBottomOf="@+id/toneFrequencyText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toneFrequencyText"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <EditText
+        android:id="@+id/toneVolumeVal"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/toneVolumeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toneVolumeText" />
+
+    <EditText
+        android:id="@+id/minPressureVal"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="-400"
+        app:layout_constraintBottom_toBottomOf="@+id/minPressureText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/minPressureText" />
+
+    <EditText
+        android:id="@+id/maxPressureVal"
+        android:layout_width="55dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:enabled="true"
+        android:inputType="number"
+        android:text="200"
+        app:layout_constraintBottom_toBottomOf="@+id/maxPressureText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/maxPressureText" />
+
+    <EditText
+        android:id="@+id/pressureSpeedVal"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="100dp"
+        android:ems="50"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/pressureSpeedText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pressureSpeedText" />
+
+    <EditText
+        android:id="@+id/sealThresholdVal"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="100dp"
+        android:ems="0"
+        android:enabled="true"
+        android:inputType="number"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/sealThresholdText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sealThresholdText" />
+
+    <TextView
+        android:id="@+id/toneFrequencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="Tone frequency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/toneVolumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Tone volume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toneFrequencyText" />
+
+    <TextView
+        android:id="@+id/minPressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Min pressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toneVolumeText" />
+
+    <TextView
+        android:id="@+id/maxPressureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Max pressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minPressureText" />
+
+    <TextView
+        android:id="@+id/sealThresholdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Seal pressure threshold\n(arbitrary units)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pressureSpeedText" />
+
+    <TextView
+        android:id="@+id/pressureSpeedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Pressure speed\n(arbitrary units)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxPressureText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="446dp">
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateStart"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="@+id/upsweep"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/upsweep"
+        app:layout_constraintTop_toTopOf="@+id/upsweep" />
+
+    <EditText
+        android:id="@+id/micThreshVal"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="20"
+        app:layout_constraintBottom_toBottomOf="@+id/occlusionThreshLabel2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/occlusionThreshLabel2" />
+
+    <TextView
+        android:id="@+id/occlusionThreshLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Occlusion audio thresh\n(arbitrary units)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sealThresholdText" />
+
+    <RadioButton
+        android:id="@+id/downsweep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:checked="true"
+        android:text="Downsweep"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/occlusionThreshLabel2" />
+
+    <RadioButton
+        android:id="@+id/upsweep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Upsweep"
+        app:layout_constraintStart_toEndOf="@+id/downsweep"
+        app:layout_constraintTop_toTopOf="@+id/downsweep" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1 @@
+/home/justin/tymp_code/tymp/phone/app/build/intermediates/ndkBuild/debug/obj/local/x86

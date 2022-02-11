@@ -1,0 +1,20 @@
+rm -f /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/*
+rm -f /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/gdbserver
+rm -f /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/gdb.setup
+mkdir -p /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/objs/native-lib//home/justin/tymp/app/src/main/cpp
+echo [arm64-v8a] "Compile++      ": "native-lib <= native-lib.cpp"
+rm -f /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/objs/native-lib//home/justin/tymp/app/src/main/cpp/native-lib.o
+/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -MMD -MP -MF /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/objs/native-lib//home/justin/tymp/app/src/main/cpp/native-lib.o.d -target aarch64-none-linux-android26 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes  --sysroot /root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument  -fno-addrsig -fno-exceptions -fno-rtti -fpic -O2 -DNDEBUG  -I/home/justin/fftw3/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/../llvm-libc++abi/include -std=c++11    -DANDROID  -nostdinc++ -Wa,--noexecstack -Wformat -Werror=format-security   -c  /home/justin/tymp/app/src/main/cpp/native-lib.cpp -o /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/objs/native-lib//home/justin/tymp/app/src/main/cpp/native-lib.o
+mkdir -p /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a
+echo [arm64-v8a] "Prebuilt       ": "libc++_shared.so <= <NDK>/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/"
+cp -f /root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_shared.so /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libc++_shared.so
+mkdir -p /home/justin/fftw3/lib/arm64-v8a
+echo [arm64-v8a] "SharedLibrary  ": "libnative-lib.so"
+/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ -Wl,-soname,libnative-lib.so -shared /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/objs/native-lib//home/justin/tymp/app/src/main/cpp/native-lib.o /home/justin/fftw3/lib/arm64-v8a/libfftw3.a -lgcc -Wl,--exclude-libs,libgcc.a -latomic -Wl,--exclude-libs,libatomic.a /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libc++_shared.so -target aarch64-none-linux-android26 -no-canonical-prefixes     -Wl,--build-id -nostdlib++ -Wl,--no-undefined -Wl,-z,noexecstack -Wl,--warn-shared-textrel -Wl,--fatal-warnings -llog -lm -lc -lm -o /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libnative-lib.so
+mkdir -p /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a
+echo [arm64-v8a] "Install        ": "libnative-lib.so => /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libnative-lib.so"
+install -p /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libnative-lib.so /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libnative-lib.so
+/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip --strip-unneeded  /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libnative-lib.so
+echo [arm64-v8a] "Install        ": "libc++_shared.so => /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libc++_shared.so"
+install -p /home/justin/tymp/app/build/intermediates/ndkBuild/release/obj/local/arm64-v8a/libc++_shared.so /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libc++_shared.so
+/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android-strip --strip-unneeded  /home/justin/tymp/app/build/intermediates/ndkBuild/release/lib/arm64-v8a/libc++_shared.so

@@ -1,0 +1,2 @@
+/home/justin/tymp_code/tymp/phone/app/Android.mk
+/home/justin/tymp_code/tymp/phone/app/Application.mk

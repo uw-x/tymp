@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav_menu">
+    <item
+        android:id="@+id/action_measure"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_measure"
+        android:title="Measure"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/action_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        app:showAsAction="always|withText" />
+</menu>

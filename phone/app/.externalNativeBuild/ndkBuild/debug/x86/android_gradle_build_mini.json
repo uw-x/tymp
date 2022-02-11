@@ -1,0 +1,17 @@
+{
+  "buildFiles": [
+    "/home/justin/ffttest2/app/Android.mk",
+    "/home/justin/ffttest2/app/Application.mk"
+  ],
+  "cleanCommands": [
+    "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/ffttest2/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/ffttest2/app/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "native-lib-debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/ffttest2/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/ffttest2/app/Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/lib /home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj/local/x86/libnative-lib.so",
+      "abi": "x86",
+      "output": "/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj/local/x86/libnative-lib.so"
+    }
+  }
+}

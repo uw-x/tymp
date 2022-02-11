@@ -1,0 +1,10 @@
+gotseal-motor 65536
+seal-pindex 6
+sealtime 1614887144315
+max-pindex 7
+maxtime 1614887144325
+middletime 1614887147884
+min-pindex 59
+mintime 1614887150746
+end-motor 64704
+endtime 1614887151515

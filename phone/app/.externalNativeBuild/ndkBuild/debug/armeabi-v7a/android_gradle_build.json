@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/home/justin/ffttest2/app/Android.mk",
+    "/home/justin/ffttest2/app/Application.mk"
+  ],
+  "cleanCommands": [
+    "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/ffttest2/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/ffttest2/app/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "native-lib-debug-armeabi-v7a": {
+      "buildCommand": "/root/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/justin/ffttest2/app/Android.mk NDK_APPLICATION_MK\u003d/home/justin/ffttest2/app/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/lib /home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libnative-lib.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/home/justin/ffttest2/app/src/main/cpp/native-lib.cpp",
+          "flags": "-target armv7-none-linux-androideabi16 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -fno-exceptions -fno-rtti -gcc-toolchain /root/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 -fpic -march\u003darmv7-a -mfloat-abi\u003dsoftfp -mfpu\u003dvfpv3-d16 -mthumb -O0 -UNDEBUG -fno-limit-debug-info -I/home/justin/fftw3/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -I/root/Android/Sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/../llvm-libc++abi/include -I/root/Android/Sdk/ndk-bundle/sources/android/support/include -std\u003dc++11 -DANDROID -Wa,--noexecstack -Wformat -Werror\u003dformat-security --sysroot /root/Android/Sdk/ndk-bundle/sysroot -isystem /root/Android/Sdk/ndk-bundle/sysroot/usr/include/arm-linux-androideabi"
+        }
+      ],
+      "output": "/home/justin/ffttest2/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cppCompilerExecutable": "/root/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}
