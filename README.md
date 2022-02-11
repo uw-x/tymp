@@ -1,5 +1,5 @@
 ## Overview
-<img src="tymp_overview.jpg" align="right" width="50%" height="50%"/>
+<img src="tymp_overview.jpg" width="50%" height="50%"/>
 
 This repository contains a the hardware design (schematic and PCB), and software required to build the open source tympanometer system. 
 
@@ -32,7 +32,7 @@ Running these four programs in the following order will generate the tympanogram
 
 * demo.m: This file processes the acoustic and pressure data recorded by the system to produce a tympanogram.
 
-Data:
+### Data:
 * mout.txt: Audio recording from smartphone.
 * pout.txt: Pressure sensor recording from microcontroller.
 * sout.txt: Timestamp recording from smartphone.
@@ -45,7 +45,8 @@ Runtime: 1.019325 seconds
 The output is the following figure.
 The first subplot shows the the band-passed acoustic signal, and the points of maximum and minimum air pressure in the ear.
 The second subplot shows the resultant tympanogram as well as the ear canal volume, admittance, and peak pressure values.
-<img src="demo/demo.png" align="right" width="50%" height="50%"/>
+
+<img src="demo/demo.png" width="50%" height="50%"/>
 
 ## Contributors
 - [Justin Chan](https://homes.cs.washington.edu/~jucha/)
