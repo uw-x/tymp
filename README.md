@@ -1,5 +1,5 @@
 ## Overview
-<img src="tymp_overview.jpg" width="50%" height="50%"/>
+<img src="tymp_overview.jpg" width="100%" height="100%"/>
 
 This repository contains a the hardware design (schematic and PCB), and software required to build the open source tympanometer system. 
 
